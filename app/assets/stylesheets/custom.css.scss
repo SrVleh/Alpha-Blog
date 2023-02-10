@@ -1,24 +1,128 @@
 @import "bootstrap/dist/css/bootstrap";
 
+:root {
+  --turq: rgb(45, 255, 245);
+  --blu: rgb(70, 91, 227);
+  --vio: rgb(157, 53, 255);
+}
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  .text-muted {
+    margin-right: 1em;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+}
 
 .navbar {
-
-  background-color: #FDF6EA !important;
-
+  background-color: black !important;
 }
-
-
 
 .navbar-brand {
-
   font-size: 3rem;
-
 }
 
+.nav-link {
+  color: white !important;
+}
 
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  //color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+                  to right,
+                  var(--turq),
+                  var(--blu),
+                  var(--vio),
+                  var(--turq)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
 
 h1 {
+  float: left;
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
 
-  color: red;
+a {
+  text-decoration: none;
+  color: white;
+}
 
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+
+  .home-title{
+    float: left;
+    font-size: 5em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+  }
+
+  .home-description {
+    float: left;
+    font-size: 1em;
+    color: #fff;
+    font-weight: lighter;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+
+  .cta-button {
+    width: 16em;
+    height: 4em;
+    border: 1px solid var(--turq);
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+
+    a {
+      font-size: 2em;
+      font-weight: bold;
+      color: white;
+    }
+  }
 }

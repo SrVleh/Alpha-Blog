@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary text-white">
   <div class="container-fluid">
     <%= link_to "ALPHA BLOG", root_path, class: "navbar-brand", id: "logo" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,10 +27,7 @@
           <a class="nav-link disabled">Link</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-info" type="submit">Search</button>
-      </form>
+      <%= link_to "New article", new_article_path, class: "btn btn-outline-success" %>
     </div>
   </div>
 </nav>

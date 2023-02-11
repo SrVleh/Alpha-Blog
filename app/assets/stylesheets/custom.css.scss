@@ -10,7 +10,7 @@ main > .container {
   padding: 60px 15px 0;
 }
 
-.container {
+.footer-content-container {
   display: flex;
   flex-direction: row;
 
@@ -54,6 +54,34 @@ main > .container {
   }
 }
 
+.article-title {
+  color: #fff;
+
+  :hover {
+    transition: .4s;
+    color: #b1f9ff;
+  }
+}
+
+.user-name {
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+                  to right,
+                  #F7EF8A,
+                  #D2AC47,
+                  #AE8625,
+                  #F7EF8A
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+
+}
+
 #logo {
   float: left;
   font-size: 1.7em;
@@ -89,6 +117,15 @@ a {
   color: white;
 }
 
+.title {
+  float: left;
+  font-size: 5em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -96,13 +133,8 @@ a {
   align-items: center;
   margin-top: 10%;
 
-  .home-title{
-    float: left;
-    font-size: 5em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    font-weight: bold;
+  h1 {
+    @extend .title;
   }
 
   .home-description {

@@ -10,30 +10,31 @@ main > .container {
   padding: 60px 15px 0;
 }
 
-.footer-content-container {
-  display: flex;
-  flex-direction: row;
-
-  .text-muted {
-    margin-right: 1em;
-
-    a {
-      display: flex;
-      align-items: center;
-
-      svg {
-        margin-right: 5px;
-      }
-    }
-  }
-}
-
 .navbar {
   background-color: rgb(8, 8, 8) !important;
 }
 
 .footer {
   background-color: rgb(28, 28, 28) !important;
+
+  .footer-content-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    .text-muted {
+      margin-right: 1em;
+
+      a {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
 }
 
 .navbar-brand {
@@ -131,6 +132,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
   margin-top: 10%;
 
   h1 {
@@ -161,4 +163,24 @@ a {
       color: white;
     }
   }
+}
+
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
 }

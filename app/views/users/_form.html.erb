@@ -14,7 +14,7 @@
       <label for="formGroupDescription" class="form-label text-white">Password</label>
       <%= f.password_field :password, class: "form-control", id: "formGroupDescription", placeholder: "not12345"%>
     </div>
-    <%= f.submit class: "btn btn-success" %>
+    <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-success")%>
     <%= link_to 'Cancel', users_path, class: "btn btn-danger" %>
   <% end %>
 </div>

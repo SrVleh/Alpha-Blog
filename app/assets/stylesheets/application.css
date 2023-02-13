@@ -31,3 +31,8 @@ p {
     flex-direction: column;
     flex: 1;
 }
+
+img {
+    width: 12em;
+    align-self: center;
+}

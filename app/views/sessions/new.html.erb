@@ -1,0 +1,18 @@
+<div class="container d-flex flex-column">
+  <h1 class="text-center mt-4">Log in</h1>
+
+  <div class="container">
+    <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+      <div class="mb-3">
+        <label for="formGroupDescription" class="form-label text-white">Email</label>
+        <%= f.email_field :email, class: "form-control", id: "formGroupDescription", placeholder: "username@gmail.com"%>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupDescription" class="form-label text-white">Password</label>
+        <%= f.password_field :password, class: "form-control", id: "formGroupDescription", placeholder: "password"%>
+      </div>
+      <%= f.submit "Log in", class: "btn btn-success"%>
+      <%= link_to 'Cancel', users_path, class: "btn btn-danger" %>
+    <% end %>
+  </div>
+</div>

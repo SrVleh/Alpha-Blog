@@ -31,11 +31,19 @@
         </li>
       </ul>
       <div>
-        <% if session[:user_id] %>
-          <%= link_to "New article", new_article_path, class: "btn btn-outline-success" %>
-          <%= link_to "Log out", logout_path, class: "btn btn-outline-danger ml-5", method: :delete %>
+        <% if logged_in? %>
+          <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="header-user-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="user-name"><%= link_to current_user.username, current_user %></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="header-user-dropdown">
+              <li><%= link_to "New article", new_article_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Log out", logout_path, class: "dropdown-item", method: :delete %></li>
+            </ul>
+          </div>
         <% else %>
           <%= link_to "Log in", login_path, class: "btn btn-outline-success" %>
+          <%= link_to "Sign up", signup_path, class: "btn btn-outline-info ml-5" %>
         <% end %>
       </div>
     </div>

@@ -30,7 +30,14 @@
           <a class="nav-link disabled">Link</a>
         </li>
       </ul>
-      <%= link_to "New article", new_article_path, class: "btn btn-outline-success" %>
+      <div>
+        <% if session[:user_id] %>
+          <%= link_to "New article", new_article_path, class: "btn btn-outline-success" %>
+          <%= link_to "Log out", logout_path, class: "btn btn-outline-danger ml-5", method: :delete %>
+        <% else %>
+          <%= link_to "Log in", login_path, class: "btn btn-outline-success" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </nav>

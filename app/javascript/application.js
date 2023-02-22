@@ -2,4 +2,4 @@
 import '@hotwired/turbo-rails'
 import 'controllers'
 import 'popper'
-import '_bootstrap'
+import 'bootstrap'

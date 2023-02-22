@@ -10,6 +10,9 @@
           <%= link_to "Articles", articles_path, class: "nav-link active"%>
         </li>
         <li class="nav-item">
+          <%= link_to "Categories", categories_path, class: "nav-link active"%>
+        </li>
+        <li class="nav-item">
           <%= link_to "About", about_path, class: "nav-link"%>
         </li>
         <li class="nav-item">
@@ -25,6 +28,7 @@
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="header-user-dropdown">
               <li><%= link_to "My profile", current_user, class: "dropdown-item" %></li>
               <li><%= link_to "New article", new_article_path, class: "dropdown-item" %></li>
+              <li><%= link_to "New category", new_category_path, class: "dropdown-item" if current_user.admin?%></li>
               <li><%= link_to "Log out", logout_path, class: "dropdown-item", method: :delete %></li>
             </ul>
           </div>

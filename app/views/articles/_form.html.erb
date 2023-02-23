@@ -10,6 +10,11 @@
       <label for="formGroupDescription" class="form-label text-white">Description</label>
       <%= f.text_area :description, class: "form-control", id: "formGroupDescription"%>
     </div>
+    <div class="mb-3">
+      <label for="formGroupCategory" class="form-label text-white">Category</label>
+      <%= f.collection_select(:category_ids, Category.all, :id, :name,
+                              { prompt: "Select categories" }, { multiple: true, class: "form-select" }) %>
+    </div>
     <%= f.submit class: "btn btn-success" %>
     <%= link_to 'Cancel', articles_path, class: "btn btn-danger" %>
 <% end %>

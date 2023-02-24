@@ -6,6 +6,9 @@
     <div class="card bg-dark text-center text-white rounded">
       <div class="card-header fst-italic">
         by <span class="user-name"><%= @article.user.username %></span>
+        <% if @article.categories.any? %>
+          <div class="mt-2"><%= render @article.categories %></div>
+        <% end %>
       </div>
       <div class="card-body">
         <div class="card-text mb-4"><%= simple_format(@article.description) %></div>
